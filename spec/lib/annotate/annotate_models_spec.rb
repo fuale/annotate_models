@@ -1,4 +1,9 @@
 # encoding: utf-8
+
+class << File
+  alias_method :exists?, :exist?
+end
+
 require_relative '../../spec_helper'
 require 'annotate/annotate_models'
 require 'annotate/active_record_patch'
